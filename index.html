@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="jquery.scrollTo-1.4.3.1-min.js"></script> 
+        <script type="text/javascript"> /* for vertical scrolling - uses jquery.scrollTo-1.4.3.1-min.js */
+        $(document).ready(function() {
+        	$('.scrolltoanchor').click(function(){
+        		$.scrollTo( this.hash, 500, { easing:'swing' }); /* 1000 = 1 sec, 500 = half second */
+        		return false;
+        	});
+        	
+        });
+        </script>      
+    </head>
+    <body>
+    <div id="top">top is here</div>
+      <ul><li><a href="#bottom" class="scrolltoanchor">go to bottom</a></li></ul>
+        <div style="height:1000px">a</div>
+    <ul><li><a href="#top" class="scrolltoanchor">go to top</a></li></ul>
+    <div id="bottom">bottom here</div>
+    </body>
+</html>
